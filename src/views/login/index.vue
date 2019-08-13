@@ -52,22 +52,22 @@
         {{ $t('login.logIn') }}
       </el-button>
 
-      <div style="position:relative">
-        <div class="tips">
-          <span>{{ $t('login.username') }} : admin</span>
-          <span>{{ $t('login.password') }} : {{ $t('login.any') }}</span>
-        </div>
-        <div class="tips">
-          <span style="margin-right:18px;">
-            {{ $t('login.username') }} : editor
-          </span>
-          <span>{{ $t('login.password') }} : {{ $t('login.any') }}</span>
-        </div>
+      <!--      <div style="position:relative">-->
+      <!--        <div class="tips">-->
+      <!--          <span>{{ $t('login.username') }} : admin</span>-->
+      <!--          <span>{{ $t('login.password') }} : {{ $t('login.any') }}</span>-->
+      <!--        </div>-->
+      <!--        <div class="tips">-->
+      <!--          <span style="margin-right:18px;">-->
+      <!--            {{ $t('login.username') }} : editor-->
+      <!--          </span>-->
+      <!--          <span>{{ $t('login.password') }} : {{ $t('login.any') }}</span>-->
+      <!--        </div>-->
 
-        <el-button class="thirdparty-button" type="primary" @click="showDialog=true">
-          {{ $t('login.thirdparty') }}
-        </el-button>
-      </div>
+      <!--        <el-button class="thirdparty-button" type="primary" @click="showDialog=true">-->
+      <!--          {{ $t('login.thirdparty') }}-->
+      <!--        </el-button>-->
+      <!--      </div>-->
     </el-form>
 
     <el-dialog :title="$t('login.thirdparty')" :visible.sync="showDialog">
@@ -276,7 +276,7 @@ $light_gray:#eee;
 
   .login-form {
     position: relative;
-    width: 520px;
+    width: 400px;
     max-width: 100%;
     padding: 160px 35px 0;
     margin: 0 auto;
