@@ -5,7 +5,8 @@
     <div class="main-container">
       <navbar />
       <tags-view />
-      <AD />
+      <!--广告-->
+      <!--      <AD />-->
       <app-main />
     </div>
   </div>
@@ -13,7 +14,8 @@
 
 <script>
 import { Navbar, Sidebar, AppMain, TagsView } from './components'
-import AD from '@/components/AD'
+// import AD from '@/components/AD'
+
 import ResizeMixin from './mixin/ResizeHandler'
 
 export default {
@@ -22,8 +24,8 @@ export default {
     Navbar,
     Sidebar,
     AppMain,
-    TagsView,
-    AD
+    TagsView
+    // AD
   },
   mixins: [ResizeMixin],
   computed: {
@@ -51,7 +53,7 @@ export default {
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
-  @import "~@/styles/mixin.scss";
+  /*@import "~@/styles/mixin.scss";*/
   .app-wrapper {
     @include clearfix;
     position: relative;

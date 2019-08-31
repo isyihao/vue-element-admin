@@ -1,6 +1,7 @@
 export default {
   route: {
     dashboard: '首页',
+    activeCode: '激活码管理',
     documentation: '文档',
     guide: '引导页',
     permission: '权限测试页',

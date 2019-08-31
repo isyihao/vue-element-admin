@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 export default {
   data() {
     return {
@@ -11,37 +11,37 @@ export default {
     }
   },
   watch: {
-    '$route.path': {
-      handler: function(val, oldVal) {
-        this.getCodefund()
-      }
-    }
+    // '$route.path': {
+    //   handler: function(val, oldVal) {
+    //     this.getCodefund()
+    //   }
+    // }
   },
   mounted() {
-    this.getCodefund()
+    // this.getCodefund()
   },
   methods: {
-    getCodefund() {
-      if (this.$isServer) return
-      const codefundId = this.isGitee()
-        ? '111'
-        : '96'
-      const template = 'horizontal'
-      axios.get(`https://codefund.io/properties/${codefundId}/funder.html?template=${template}`)
-        .then(function(response) {
-          document.getElementById('codefund').innerHTML = response.data
-        })
-    },
-    isGitee() {
-      const origin = window.location.origin
-      if (origin.includes('gitee.io')) {
-        return true
-      }
-      return false
-    },
-    loadError(oError) {
-      this.loadSuccess = false
-    }
+    // getCodefund() {
+    //   if (this.$isServer) return
+    //   const codefundId = this.isGitee()
+    //     ? '111'
+    //     : '96'
+    //   const template = 'horizontal'
+    //   axios.get(`https://codefund.io/properties/${codefundId}/funder.html?template=${template}`)
+    //     .then(function(response) {
+    //       document.getElementById('codefund').innerHTML = response.data
+    //     })
+    // },
+    // isGitee() {
+    //   const origin = window.location.origin
+    //   if (origin.includes('gitee.io')) {
+    //     return true
+    //   }
+    //   return false
+    // },
+    // loadError(oError) {
+    //   this.loadSuccess = false
+    // }
   }
 }
 </script>
